@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="imageGroup">
+        <img src="images/something.png" /> 
+        <p>describe image above</p>
+    </div>
+
+    <img src="images/something2.png">
+
+    <script>
+        window.onload = function() {
+            let img = document.getElementsByClassName("imageGroup");
+            let imgLength = img.length;
+            for (let i = 0; i < imgLength; i++) {
+                img[i].style.border = "thick solid red";
+            }
+
+            let findGraffitiImg = document.querySelectorAll("img:not([alt])")
+            findGraffitiImg.forEach(setAlt => {
+                setAlt.setAttribute("alt", "graffiti image")
+            });
+        }
+    </script>
+</body>
+
+</html>
