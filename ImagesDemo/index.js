@@ -11,13 +11,11 @@ function init() {
 }
 
 function toWork() {
-
     let paraTag = document.getElementsByTagName("p");
     let pLength = paraTag.length;
     for (let i = 0; i < pLength; i++) {
         paraTag[i].style.border = "thin solid black";
     }
-
 }
 
 function applyRoundedImg() {
